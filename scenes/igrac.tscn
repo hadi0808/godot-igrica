@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bnmspnxhrve53"]
+
+[ext_resource type="Script" uid="uid://bey7yegi2oty5" path="res://scripts/igrac.gd" id="1_igrac"]
+[ext_resource type="Texture2D" uid="uid://ce6kkojquocgu" path="res://scenes/91680049-0b53b880-eb18-11ea-84f0-656e743e3a1c.png" id="2_wne0e"]
+
+[sub_resource type="RectangleShape2D" id="OblikIgraca"]
+size = Vector2(30, 30)
+
+[node name="Igrac" type="CharacterBody2D" unique_id=937011760]
+collision_mask = 2
+script = ExtResource("1_igrac")
+
+[node name="Oblik" type="CollisionShape2D" parent="." unique_id=1518970711]
+shape = SubResource("OblikIgraca")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1677974881]
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("2_wne0e")

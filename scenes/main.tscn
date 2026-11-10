@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://bvsjmcvf413me"]
+
+[ext_resource type="Script" uid="uid://dw3vw1lbw7wln" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="PackedScene" uid="uid://bnmspnxhrve53" path="res://scenes/igrac.tscn" id="2_igrac"]
+[ext_resource type="PackedScene" path="res://scenes/predmet.tscn" id="3_predmet"]
+
+[sub_resource type="RectangleShape2D" id="Shape_ZidGore"]
+size = Vector2(884, 18)
+
+[sub_resource type="RectangleShape2D" id="Shape_ZidDolje"]
+size = Vector2(884, 18)
+
+[sub_resource type="RectangleShape2D" id="Shape_ZidLijevo"]
+size = Vector2(18, 382)
+
+[sub_resource type="RectangleShape2D" id="Shape_ZidDesno"]
+size = Vector2(18, 382)
+
+[sub_resource type="RectangleShape2D" id="Shape_Prepreka1"]
+size = Vector2(24, 174)
+
+[sub_resource type="RectangleShape2D" id="Shape_Prepreka2"]
+size = Vector2(210, 22)
+
+[sub_resource type="RectangleShape2D" id="Shape_Prepreka3"]
+size = Vector2(184, 22)
+
+[sub_resource type="RectangleShape2D" id="Shape_Prepreka4"]
+size = Vector2(22, 118)
+
+[node name="Main" type="Node2D" unique_id=431579820]
+script = ExtResource("1_main")
+
+[node name="Pozadina" type="ColorRect" parent="." unique_id=1559628907]
+offset_right = 960.0
+offset_bottom = 540.0
+mouse_filter = 2
+color = Color(0.04, 0.067, 0.12, 1)
+
+[node name="Polje" type="ColorRect" parent="." unique_id=2119689087]
+offset_left = 24.0
+offset_top = 110.0
+offset_right = 936.0
+offset_bottom = 522.0
+mouse_filter = 2
+color = Color(0.075, 0.12, 0.2, 1)
+
+[node name="Zidovi" type="Node2D" parent="." unique_id=82573332]
+
+[node name="ZidGore" type="StaticBody2D" parent="Zidovi" unique_id=168288045]
+position = Vector2(480, 124)
+collision_layer = 2
+
+[node name="Oblik" type="CollisionShape2D" parent="Zidovi/ZidGore" unique_id=836644410]
+shape = SubResource("Shape_ZidGore")
+
+[node name="Slika" type="ColorRect" parent="Zidovi/ZidGore" unique_id=1047766892]
+offset_left = -442.0
+offset_top = -9.0
+offset_right = 442.0
+offset_bottom = 9.0
+mouse_filter = 2
+color = Color(0.35, 0.48, 0.64, 1)
+
+[node name="ZidDolje" type="StaticBody2D" parent="Zidovi" unique_id=588288374]
+position = Vector2(480, 504)
+collision_layer = 2
+
+[node name="Oblik" type="CollisionShape2D" parent="Zidovi/ZidDolje" unique_id=1908133738]
+shape = SubResource("Shape_ZidDolje")
+
+[node name="Slika" type="ColorRect" parent="Zidovi/ZidDolje" unique_id=2067310492]
+offset_left = -442.0
+offset_top = -9.0
+offset_right = 442.0
+offset_bottom = 9.0
+mouse_filter = 2
+color = Color(0.35, 0.48, 0.64, 1)
+
+[node name="ZidLijevo" type="StaticBody2D" parent="Zidovi" unique_id=1721816847]
+position = Vector2(38, 314)
+collision_layer = 2
+
+[node name="Oblik" type="CollisionShape2D" parent="Zidovi/ZidLijevo" unique_id=1288147285]
+shape = SubResource("Shape_ZidLijevo")
+
+[node name="Slika" type="ColorRect" parent="Zidovi/ZidLijevo" unique_id=1755090699]
+offset_left = -9.0
+offset_top = -191.0
+offset_right = 9.0
+offset_bottom = 191.0
+mouse_filter = 2
+color = Color(0.35, 0.48, 0.64, 1)
+
+[node name="ZidDesno" type="StaticBody2D" parent="Zidovi" unique_id=254458949]
+position = Vector2(922, 314)
+collision_layer = 2
+
+[node name="Oblik" type="CollisionShape2D" parent="Zidovi/ZidDesno" unique_id=1363055134]
+shape = SubResource("Shape_ZidDesno")
+
+[node name="Slika" type="ColorRect" parent="Zidovi/ZidDesno" unique_id=1729368995]
+offset_left = -9.0
+offset_top = -191.0
+offset_right = 9.0
+offset_bottom = 191.0
+mouse_filter = 2
+color = Color(0.35, 0.48, 0.64, 1)
+
+[node name="Prepreka1" type="StaticBody2D" parent="Zidovi" unique_id=106536043]
+position = Vector2(348, 267)
+collision_layer = 2
+
+[node name="Oblik" type="CollisionShape2D" parent="Zidovi/Prepreka1" unique_id=137069223]
+shape = SubResource("Shape_Prepreka1")
+
+[node name="Slika" type="ColorRect" parent="Zidovi/Prepreka1" unique_id=1880454501]
+offset_left = -12.0
+offset_top = -87.0
+offset_right = 12.0
+offset_bottom = 87.0
+mouse_filter = 2
+color = Color(0.35, 0.48, 0.64, 1)
+
+[node name="Prepreka2" type="StaticBody2D" parent="Zidovi" unique_id=753647659]
+position = Vector2(633, 288)
+collision_layer = 2
+
+[node name="Oblik" type="CollisionShape2D" parent="Zidovi/Prepreka2" unique_id=607270870]
+shape = SubResource("Shape_Prepreka2")
+
+[node name="Slika" type="ColorRect" parent="Zidovi/Prepreka2" unique_id=1205195170]
+offset_left = -105.0
+offset_top = -11.0
+offset_right = 105.0
+offset_bottom = 11.0
+mouse_filter = 2
+color = Color(0.35, 0.48, 0.64, 1)
+
+[node name="Prepreka3" type="StaticBody2D" parent="Zidovi" unique_id=689086332]
+position = Vector2(366, 419)
+collision_layer = 2
+
+[node name="Oblik" type="CollisionShape2D" parent="Zidovi/Prepreka3" unique_id=13175840]
+shape = SubResource("Shape_Prepreka3")
+
+[node name="Slika" type="ColorRect" parent="Zidovi/Prepreka3" unique_id=1442594060]
+offset_left = -92.0
+offset_top = -11.0
+offset_right = 92.0
+offset_bottom = 11.0
+mouse_filter = 2
+color = Color(0.35, 0.48, 0.64, 1)
+
+[node name="Prepreka4" type="StaticBody2D" parent="Zidovi" unique_id=1159246800]
+position = Vector2(782, 211)
+collision_layer = 2
+
+[node name="Oblik" type="CollisionShape2D" parent="Zidovi/Prepreka4" unique_id=308927205]
+shape = SubResource("Shape_Prepreka4")
+
+[node name="Slika" type="ColorRect" parent="Zidovi/Prepreka4" unique_id=1478963561]
+offset_left = -11.0
+offset_top = -59.0
+offset_right = 11.0
+offset_bottom = 59.0
+mouse_filter = 2
+color = Color(0.35, 0.48, 0.64, 1)
+
+[node name="Predmeti" type="Node2D" parent="." unique_id=1310993281]
+
+[node name="Kristal1" parent="Predmeti" unique_id=1219525406 instance=ExtResource("3_predmet")]
+position = Vector2(198, 223)
+
+[node name="Kristal2" parent="Predmeti" unique_id=31787317 instance=ExtResource("3_predmet")]
+position = Vector2(467, 186)
+
+[node name="Kristal3" parent="Predmeti" unique_id=541200803 instance=ExtResource("3_predmet")]
+position = Vector2(578, 414)
+
+[node name="Kristal4" parent="Predmeti" unique_id=1410895654 instance=ExtResource("3_predmet")]
+position = Vector2(842, 421)
+
+[node name="Igrac" parent="." unique_id=1498953797 instance=ExtResource("2_igrac")]
+position = Vector2(120, 216)
+
+[node name="Sucelje" type="CanvasLayer" parent="." unique_id=1985677664]
+
+[node name="Rezultat" type="Label" parent="Sucelje" unique_id=82820066]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Poruka" type="Label" parent="Sucelje" unique_id=1105114237]
+offset_right = 40.0
+offset_bottom = 23.0
